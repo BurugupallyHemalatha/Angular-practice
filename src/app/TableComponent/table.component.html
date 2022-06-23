@@ -1,0 +1,62 @@
+<h1 class="heading">RESOURCE ONE IT SOLUTION</h1>
+ 
+<table mat-table [dataSource]="totalData">  
+    <ng-container matColumnDef="position" >
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell   *matCellDef="let element">{{element.position}}
+      
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell   *matCellDef="let element;let j =index;">  
+         
+        <span *ngIf="editNoIndex!==j" (click)="clickNumber(element.name,j)">
+          {{element.name}} 
+        </span >
+        <span *ngIf="editNoIndex ===j " (click)="clickText()">
+          <input type="text" [(ngModel)]="nameModal" value="" style="border:none"  >  
+          <button class="btn btn-primary" (click)="numbersave(element)" >save</button>
+          
+        </span>
+       
+         </td>
+      </ng-container>
+    
+       
+    
+      <ng-container matColumnDef="Role">
+        <th mat-header-cell *matHeaderCellDef> Role </th>
+        <td mat-cell   *matCellDef="let element; let i = index;"> 
+          <span *ngIf="editRowIndex !== i "(click)="clickRole(element.Role, i)"> 
+            {{element.Role}}</span>
+            <span *ngIf="editRowIndex === i" (click)="openclick()"> 
+              <input type="text"  [(ngModel)]="modal" value=""  style="border:none">
+              <button class="btn btn-primary" (click)="save(element)">save</button>
+            </span>
+        </td>
+      </ng-container>
+    <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell  *matCellDef="let element,let s =index;">
+          <span *ngIf="editStatusIndex!==s"  (click)="clickStatus(element.Status,s)">
+            {{element.Status}}
+          </span>
+          <span  *ngIf="editStatusIndex === s" (click)="openStatus()">
+            <input type="text" [(ngModel)]="statusModal" value=""  style="border:none">
+            <button class="btn btn-primary" (click)="statusSave(element)">save</button>
+           </span>
+           
+        </td>
+    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+
+
+ 
+  
+  
+  
+ 

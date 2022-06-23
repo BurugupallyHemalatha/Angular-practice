@@ -1,0 +1,37 @@
+
+
+<div class="login">
+      <div class="logins">
+            <a routerLink="/register" class="homeregister">Register</a> <br>
+                  <div class="mainlog">
+                    <a routerLink="/login" class="homelogin">Login</a>
+                  </div>
+      </div>
+      <div class="helping">
+            <a class="help">help us?</a>
+            <a routerLink="/contact" class="contact">Contact us?</a>
+      </div>
+    
+      <button (click)="openModal()" class="btnclick" >click</button>
+     
+     
+     
+          <div *ngIf="popup" class="own">
+                 <div class="own-body"><button (click)=" closeModal()" >X</button>
+                <h1>HELLO EVRY ONE </h1>  
+                 NAME: <input type="text" class="input"><br>
+                 EMAIL: <input type="text"  class="input"><br>
+                 NUMBER:<input type="text"  class="input"><br>
+                 <input type="submit" class="sub">
+            </div>
+       </div>
+       <div class="modal">
+            <a routerLink="/modal" class="modalpop">MODAL</a>
+          </div>
+
+
+
+     
+
+
+</div>

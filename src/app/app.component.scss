@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+}
+ 
+*{
+    margin:0px;
+    padding:0px;
+}
+.mainhead{
+    display: flex;
+    height: 66px;
+    background-color: #8b7e7e;
+    background-position:" ";
+}
+.head h1 {
+    font-size: 21px;
+    margin-top: 21px;
+    margin-left: 49px;
+}
+.headmenu a{
+    background-color: #f4433600;
+    color: rgb(238, 230, 230);
+    padding: 4px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+     
+   }
+   .headmenu a:hover{
+       color: red;
+   }
+   .headmenu {
+    margin-left: 174px;
+    margin-top: 20px;
+}
+.serachbtn{
+    margin-top: 24px;
+    width: 123px;
+    border-radius: 15px;
+    margin-left: 75px;
+    height: 24px;
+}
+.button {
+    margin-left: 233px;
+    /* width: 124px; */
+    margin-top: -22px;
+}
+.btn {
+    width: 82px;
+    height: 27px;
+    border-radius: 11px;
+    margin-top: -5px;
+}
+.body {
+    float: right;
+    margin-right: 168px;
+    margin-top: 26px;
+}
+.b1 {
+    margin-left: 36px;
+}
+p.log {
+    font-size: 23px;
+    margin-top: 12px;
+    margin-left: 25px;
+}
+p.reg {
+    font-size: 31px;
+}
+p.reg::after{
+    content:"";
+
+}
+.help {
+    display: flex;
+    margin-top: 28px;
+}
+.needhelp {
+    font-size: 18px;
+}
+.contact {
+    font-size: 18px;
+}
+p.cont {
+    margin-left: 55px;
+}
+h1.zone {
+    font-size: 50px;
+    color: gray;
+    font-family: cursive;
+    top: 254px;
+    position: fixed;
+    left: -13px;
+    margin-left: 365px;
+}

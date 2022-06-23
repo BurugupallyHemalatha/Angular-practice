@@ -1,0 +1,37 @@
+<h1>Au </h1>
+<!-- <form [formGroup]="auForm"  *ngFor="let value of auForm; let i = index"> -->
+<!-- <div class="input"> -->
+<!-- <label>Name:</label><input type="text" id="outer"formControlName="firstname" autocomplete="off">
+<label class="label">Last:</label><input type="text" id="outerdown" class="last"formControlName="lastname" autocomplete="off">
+</div>
+<div *ngFor="let ele of auForm.get(values); let i = index" class="input"> 
+  <label>Name:</label><input type="text" id="innerup" formControlName="firstnames" autocomplete="off">
+  <label  class="label">Last:</label> <input type="text" id="innertext" class="last" formControlName="lastnames"autocomplete="off">
+  <button (click)="removefeild(i)" class="remove">Remove</button>
+</div> -->
+
+
+<!-- <button (click)="addfeild()" class="add">ADD</button>
+<div class="submit">
+<button (click)="total()" type="button"class="submi">Submit</button>
+</div> -->
+<div class="container">
+	<form  [formGroup]="todoForm" (submit)="todoSubmit(todoForm.value); todoForm.reset()" >
+		<div class="form-group">
+		<h1 class="text-center ">Todo App</h1>
+			<div class="input">
+			    <input type="text" #todo  class="form-control" placeholder="Add Todo" autocomplete="off" formControlName="todo" >
+				<span class="input-group-text" (click)="addTodo(todo.value)">
+				<i class="material-icons">add</i></span>
+			</div>
+		</div>
+		<div class="data">
+		<ul class="list-unstyled">
+			<li *ngFor="let todo of todoArray">{{todo}} <i (click)="deleteItem(todo)" class="material-icons">delete</i></li>
+		</ul>
+	</div>
+	</form>
+</div>
+
+
+<!-- </form> -->

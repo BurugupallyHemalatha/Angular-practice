@@ -1,0 +1,90 @@
+<div class="mainlogin">
+<p class="loginpara">login !</p>
+<form  [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="login">
+          <mat-form-field>
+            <label>Email  :</label><input  matInput type="text"  class="right1 right Email" formControlName="email1" autocomplete="off" required
+            [ngClass]="{'is-invalid': submitted && f['email1']['errors'] }">
+          </mat-form-field>
+            <div class="error" *ngIf="submitted && f['email1']['errors']">
+              <div  *ngIf="f['email1']['errors']" class="red">
+                 email is requried
+             </div>
+           </div>
+            <br>
+            <mat-form-field>
+            <label>password :</label>
+            <input type="text" matInput  type="password"  class="right passowrd" formControlName="password" autocomplete="off"  required 
+            [ngClass]="{'is-invalid': submitted && f['password']['errors'] }" (change)="encrypt(text)">
+            </mat-form-field>
+            <div class="error" *ngIf="submitted && f['password']['errors']">
+              <div  *ngIf="f['password']['errors']" class="red">
+                password is requried
+             </div>
+             <div *ngIf="f['password']['errors']['minlength']" class="error">Password must be at least 6 characters</div>
+           </div>
+        </div>
+      <div class="loginbtn">
+          <!-- <button class="loginbutton">Login</button> -->
+          <button   color="primary" class="btn btn-primary loginbutton" [disabled]="!this.loginForm.value.email1 || !this.loginForm.value.password" type="submit" >Login</button>
+
+          <!-- {{!this.loginForm.value.email1}} --- {{!this.loginForm.value.password}} -->
+          <button class="loginregister"><span><a routerLink="/register">Register</a></span></button>
+      </div>
+    <div class="infomation"> 
+      <div class="forget">
+        <button (click)="openModal()" class="btnclick" >Forget passowrd?</button>
+     
+     
+     
+        <div *ngIf="popup" class="own">
+                   <div class="position">
+                           <div class="own-body"><button (click)=" closeModal()" class="btncls">X</button><br>
+                            <mat-form-field>
+                              NAME: <input type="text"  matInput class="input" formControlName="name" autocomplete="off" required><br>
+                            </mat-form-field>
+                            <div class="errors" *ngIf="submitted && f['name']['errors']">
+                              <div  *ngIf="f['name']['errors']" class="reds">
+                                 name is requried
+                             </div>
+                           </div>
+                            <mat-form-field>
+                                EMAIL: <input type="text"  matInput class="input" formControlName="email" autocomplete="off" required><br>
+                            </mat-form-field>
+                            <mat-form-field>
+                              NUMBER:<input type="text"  matInput  class="input" formControlName="number" autocomplete="off" required><br>
+                            </mat-form-field>
+                              
+                                <button  type="submit" class="btn btn primary sub" >submit</button>
+                           </div>
+                     </div>
+        <!-- <a routerLink="/#"  (click)="fun()">Forget passowrd?</a> -->
+        <!-- <a routerLink="/forgot">forgot password ?</a> -->
+      </div>
+      <div class="not a number">
+        <a routerLink="/register">Not a Mumber?</a>
+      </div>
+    </div>
+
+</div>
+  </form>
+
+<!-- import { NgModule } from '@angular/core'; -->
+<!-- import { RouterModule, Routes } from '@angular/router'; -->
+<!-- import { LoginComponent } from './login/login.component'; -->
+<!-- import { RegistrationComponent } from './registration/registration.component'; -->
+
+ 
+
+<!-- @NgModule({ -->
+  <!-- declarations:[ -->
+    <!-- LoginComponent,RegistrationComponent -->
+  <!-- ], -->
+  <!-- imports: [RouterModule.forRoot([ -->
+    <!-- {path:'reisgter',component:RegistrationComponent}, -->
+    <!-- {path:'login',component:LoginComponent}, -->
+    <!-- ]), -->
+  <!-- ], -->
+  <!-- exports: [RouterModule] -->
+<!-- }) -->
+<!-- export class AppRoutingModule { } -->

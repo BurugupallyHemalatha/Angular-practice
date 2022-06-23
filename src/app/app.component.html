@@ -1,0 +1,53 @@
+ <body class="mainbody">
+    <div class="mainhead">
+        <div class="head">
+          <h1>STUDENT ZONE</h1>
+        </div>
+   
+        <div class="headmenu">
+          <a routerLinkActive="active" routerLink="/home">Home</a> 
+          <a routerLinkActive="active" routerLink="/au">AU</a>
+          <a  routerLinkActive="active" routerLink="/jntu">JNTU</a>
+          <a routerLinkActive="active" routerLink="/about">About</a>
+          <a routerLinkActive="active" routerLink="/contact">Contact</a>
+          <a routerLinkActive="active" routerLink="/apply">Apply Job</a>
+          <router-outlet></router-outlet>
+        </div>
+     <div class="boxs">
+          <div class="serach">
+            <input type="text" class="serachbtn" placeholder="search.....">
+          </div>
+          <div class="button">
+                        <button class="btn" (click)="submitfunction()">submit</button>
+          </div>
+     </div>
+   </div>
+ <!-- <div class="mainbody">
+   <div class="body">
+          <div class="b1">
+              <div class="register">
+                <p class="reg">
+                  <a routerLinkActive="active" routerLink="/register">Register</a>
+                </p>
+              </div>
+
+               <div class="log">
+                <p class="log"> 
+                  <a routerLinkActive="active"  routerLink="/login">Login</a>
+                </p>
+            </div>
+              <router-outlet></router-outlet>
+           
+        </div> 
+        <div class="help">
+              <div class="needhelp">
+                  <p class="need"><a href="#Needhelp">needhelp?</a></p>
+              </div>
+              <div class="contact">
+                  <p class="cont"><a href="#Contact">Contact</a></p>
+              </div>
+        </div>
+   </div>-->
+ 
+<!-- <h1 class="zone">.........STUDENT ZONE ......... </h1> -->
+</body>
